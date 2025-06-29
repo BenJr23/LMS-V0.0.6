@@ -98,10 +98,12 @@ export default function Home() {
           console.log('Session created successfully for', email);
           
           // Step 3: Redirect based on role
-          if (facultyData.role === 'student') {
-            window.location.href = '/student/dashboard';
-          } else {
-            window.location.href = '/';
+          if (typeof window !== 'undefined') {
+            if (facultyData.role === 'student') {
+              window.location.href = '/student/dashboard';
+            } else {
+              window.location.href = '/';
+            }
           }
         } else {
           console.log('Role setting failed:', roleResult.error);

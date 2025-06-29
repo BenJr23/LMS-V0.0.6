@@ -38,9 +38,12 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
   }
 
   const addLink = () => {
-    const url = window.prompt('Enter URL');
-    if (url) {
-      editor.chain().focus().setLink({ href: url }).run();
+    // Check if we're in a browser environment
+    if (typeof window !== 'undefined') {
+      const url = window.prompt('Enter URL');
+      if (url) {
+        editor.chain().focus().setLink({ href: url }).run();
+      }
     }
   };
 

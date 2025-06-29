@@ -98,12 +98,14 @@ export default function Home() {
           console.log('Session created successfully for', email);
           
           // Step 3: Redirect based on role
-          if (facultyData.role === 'faculty') {
-            window.location.href = '/faculty/dashboard';
-          } else if (facultyData.role === 'admin') {
-            window.location.href = '/admin/dashboard';
-          } else {
-            window.location.href = '/';
+          if (typeof window !== 'undefined') {
+            if (facultyData.role === 'faculty') {
+              window.location.href = '/faculty/dashboard';
+            } else if (facultyData.role === 'admin') {
+              window.location.href = '/admin/dashboard';
+            } else {
+              window.location.href = '/';
+            }
           }
         } else {
           console.log('Role setting failed:', roleResult.error);
