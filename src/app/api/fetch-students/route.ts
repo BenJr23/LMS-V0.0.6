@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
   console.log('[fetch-faculty] Generated signature:', signature);
 
   try {
-    const response = await fetch(`http://localhost:3001/api/xyz/getStudent`, {
+    const response = await fetch(`https://sjsfi-enrollment.vercel.app/api/xyz/getStudent`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.SJSFI_LMS_API_KEY}`,
