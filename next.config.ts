@@ -1,18 +1,7 @@
 import type { NextConfig } from "next";
 
-
-/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-    devIndicators: false,
-    experimental: {
-        authInterrupts: true,
-        serverActions: {
-            bodySizeLimit: '10mb',
-        },
-    },
-    images: {
-        domains: ['res.cloudinary.com'],
-    },
+  /* config options here */
 };
 
 export default nextConfig;
