@@ -6,13 +6,12 @@
     "seed": "tsx prisma/seed.ts"
   },
   "scripts": {
-
     "start": "next start",
     "lint": "next lint",
     "dev": "next dev --turbopack",
-    "vercel-build": "bunx prisma generate && bun run build",
-    "build": "next build",
-    "postinstall": "bunx prisma generate"
+    "vercel-build": "prisma generate && next build",
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.22.0",

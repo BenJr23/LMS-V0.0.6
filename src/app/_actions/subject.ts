@@ -1,8 +1,7 @@
 'use server';
 
-import { PrismaClient, Prisma } from '../../generated/prisma';
-
-const prisma = new PrismaClient();
+import { prisma } from '../../lib/prisma';
+import { Prisma } from '../../generated/prisma';
 
 export async function getSubjects() {
   try {

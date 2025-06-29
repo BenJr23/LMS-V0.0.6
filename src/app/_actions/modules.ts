@@ -1,10 +1,8 @@
 'use server';
 
-import { PrismaClient } from '../../generated/prisma';
 import { currentUser } from '@clerk/nextjs/server';
+import { prisma } from '../../lib/prisma';
 import { createClient } from '@supabase/supabase-js';
-
-const prisma = new PrismaClient();
 
 // Create a Supabase client with service role key to bypass RLS
 const supabaseAdmin = createClient(

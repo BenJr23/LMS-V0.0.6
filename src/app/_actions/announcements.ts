@@ -1,9 +1,7 @@
 'use server';
 
-import { PrismaClient } from '../../generated/prisma';
 import { currentUser } from '@clerk/nextjs/server';
-
-const prisma = new PrismaClient();
+import { prisma } from '../../lib/prisma';
 
 export async function createAnnouncement({
   subjectInstanceId,

@@ -1,9 +1,7 @@
 'use server';
 
 import { currentUser } from '@clerk/nextjs/server';
-import { PrismaClient } from '../../generated/prisma';
-
-const prisma = new PrismaClient();
+import { prisma } from '../../lib/prisma';
 
 export async function enrollInSubject(subjectInstanceId: string, enrollmentCode: number) {
   try {
