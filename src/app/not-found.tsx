@@ -1,12 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 // src/app/not-found.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function NotFound() {
     return (
         <div className="flex items-center justify-center h-screen w-screen bg-white px-4 text-center">
             <div className="flex flex-col items-center max-w-md">
-                <img
+                <Image
                     src="/assets/sjsfi_logo.svg"
                     alt="SJSFI Logo"
                     width={100}
