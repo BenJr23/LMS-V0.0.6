@@ -7,6 +7,9 @@ import QuizRequirementDetail from './components/QuizRequirementDetail';
 import { getStudentRequirementDetail } from '@/app/_actions/requirement';
 import { useEffect, useState } from 'react';
 
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic';
+
 export default function RequirementDetailPage({ 
   params 
 }: { 

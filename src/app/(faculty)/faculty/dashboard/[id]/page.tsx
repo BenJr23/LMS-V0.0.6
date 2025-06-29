@@ -12,6 +12,9 @@ import toast, { Toaster } from 'react-hot-toast';
 import RichTextEditor from '@/components/RichTextEditor';
 import { useRouter } from 'next/navigation';
 
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic';
+
 interface SubjectInstance {
   id: string;
   teacherName: string;
