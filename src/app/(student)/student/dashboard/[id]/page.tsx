@@ -49,8 +49,8 @@ interface SubjectInstance {
 interface Submission {
   id: string;
   title: string;
-  content: string;
-  filePath: string;
+  content: string | null;
+  filePath: string | null;
   graded: boolean;
   score: number | null;
   feedback: string | null;
@@ -106,7 +106,7 @@ export default function SubjectDetailPage({ params }: { params: Promise<{ id: st
         }
 
         setSubjectInstance(subjectData);
-        if (subjectData.icon) {
+        if (subjectData?.icon) {
           const url = await getImageUrl(subjectData.icon);
           if (url) {
             setImageUrl(url);
